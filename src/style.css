@@ -1,5 +1,4 @@
-.weather-app-container,
-header {
+.weather-app-container {
 	max-width: 700px;
 	margin: 20px auto;
 }
