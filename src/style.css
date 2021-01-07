@@ -1,8 +1,9 @@
-.container {
-}
-.weather-app {
+.weather-app-container,
+header {
 	max-width: 700px;
 	margin: 20px auto;
+}
+.weather-app {
 	padding: 20px;
 	border: 1px solid #000;
 	border-radius: 25px;
@@ -30,6 +31,6 @@ li {
 	list-style-type: none;
 	text-align: center;
 }
-small {
+footer {
 	padding-top: 20px;
 }
