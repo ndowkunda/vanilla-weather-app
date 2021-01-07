@@ -1,3 +1,35 @@
+.container {
+}
+.weather-app {
+	max-width: 700px;
+	margin: 20px auto;
+	padding: 20px;
+	border: 1px solid #000;
+	border-radius: 25px;
+}
+h1,
+h2,
+h3,
+h4 {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 28px;
+	text-align: center;
+}
 h1 {
-	color: rgb(43, 226, 180);
+	color: #596aca;
+}
+h4 {
+	font-size: 18px;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style-type: none;
+	text-align: center;
+}
+small {
+	padding-top: 20px;
 }
