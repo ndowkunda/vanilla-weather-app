@@ -1,12 +1,3 @@
-.weather-app-container {
-	max-width: 700px;
-	margin: 20px auto;
-}
-.weather-app {
-	padding: 20px;
-	border: 1px solid #000;
-	border-radius: 25px;
-}
 h1,
 h2,
 h3,
@@ -21,6 +12,7 @@ h1 {
 }
 h4 {
 	font-size: 18px;
+	color: #878787;
 }
 ul {
 	margin: 0;
@@ -29,7 +21,35 @@ ul {
 li {
 	list-style-type: none;
 	text-align: center;
+	font-weight: 500;
 }
 footer {
 	padding-top: 20px;
+}
+strong {
+	font-size: 36px;
+}
+a {
+	text-decoration: none;
+}
+.weather-app-container {
+	max-width: 700px;
+	margin: 20px auto;
+}
+.weather-app {
+	padding: 20px;
+	border: 1px solid #000;
+	border-radius: 25px;
+}
+
+.current-weather-icon {
+	height: 100px;
+	width: 100px;
+}
+.units {
+	font-weight: 500;
+	font-size: 20px;
+	position: relative;
+	right: -3px;
+	top: -12px;
 }
