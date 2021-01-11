@@ -29,6 +29,7 @@ function displayTemp(response) {
 	let windElement = document.querySelector("#wind-speed");
 	let dateElement = document.querySelector("#current-date");
 	let iconElement = document.querySelector("#weather-icon");
+	celsiusTemp = response.data.main.temp;
 	tempElement.innerHTML = Math.round(response.data.main.temp);
 	cityElement.innerHTML = response.data.name;
 	descriptionElement.innerHTML = response.data.weather[0].description;
@@ -57,5 +58,28 @@ function search(city) {
 	axios.get(apiUrl).then(displayTemp);
 }
 
+function displayFahrenheitTemp(event) {
+	event.preventDefault();
+	let tempElement = document.querySelector("#current-temp");
+	celsiusLink.classList.remove("active");
+	fahrenheitLink.classList.add("active");
+	let fahrenheitTemp = celsiusTemp * 1.8 + 32.0;
+	tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
+function displaycelsiusTemp(event) {
+	event.preventDefault();
+	celsiusLink.classList.add("active");
+	fahrenheitLink.classList.remove("active");
+	let tempElement = document.querySelector("#current-temp");
+	tempElement.innerHTML = Math.round(celsiusTemp);
+}
+let celsiusTemp = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displaycelsiusTemp);

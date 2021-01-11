@@ -23,9 +23,7 @@ li {
 	text-align: center;
 	font-weight: 500;
 }
-li:first-letter {
-	text-transform: capitalize;
-}
+
 footer {
 	padding-top: 20px;
 }
@@ -37,6 +35,9 @@ a {
 }
 form {
 	margin-bottom: 30px;
+}
+li:first-letter {
+	text-transform: capitalize;
 }
 .weather-app-container {
 	max-width: 700px;
@@ -58,4 +59,8 @@ form {
 	position: relative;
 	right: -3px;
 	top: -12px;
+}
+.units .active {
+	color: #000;
+	cursor: default;
 }
