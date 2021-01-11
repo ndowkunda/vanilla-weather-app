@@ -17,6 +17,22 @@
 		<div class="container">
 			<div class="weather-app-container">
 				<section class="weather-app">
+					<form id="search-form">
+						<div class="row">
+							<div class="col-9">
+								<input
+									type="search"
+									placeholder="type a city..."
+									class="form-control"
+									id="city-input"
+									autocomplete="off"
+								/>
+							</div>
+							<div class="col-3">
+								<input type="submit" value="search" class="btn btn-primary" />
+							</div>
+						</div>
+					</form>
 					<div class="row">
 						<div class="col-sm-4">
 							<h1 id="city-name">London</h1>
@@ -34,7 +50,7 @@
 								<li>
 									<img
 										class="current-weather-icon"
-										src=""
+										src="#"
 										alt="sunshine-icon"
 										id="weather-icon"
 									/>
