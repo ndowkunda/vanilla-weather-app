@@ -1,13 +1,6 @@
 function formatDate(timestamp) {
 	let date = new Date(timestamp);
-	let hours = date.getHours();
-	if (hours < 10) {
-		hours = `0${hours}`;
-	}
-	let minutes = date.getMinutes();
-	if (minutes < 10) {
-		minutes = `0${minutes}`;
-	}
+
 	let days = [
 		"Sunday",
 		"Monday",
@@ -18,7 +11,19 @@ function formatDate(timestamp) {
 		"Saturday",
 	];
 	let day = days[date.getDay()];
-	return `${day} , ${hours}:${minutes}`;
+	return `${day} , ${formatHours(timestamp)}`;
+}
+function formatHours(timestamp) {
+	let date = new Date(timestamp);
+	let hours = date.getHours();
+	if (hours < 10) {
+		hours = `0${hours}`;
+	}
+	let minutes = date.getMinutes();
+	if (minutes < 10) {
+		minutes = `0${minutes}`;
+	}
+	return `${hours}:${minutes}`;
 }
 
 function displayTemp(response) {
@@ -53,7 +58,24 @@ function handleSubmit(event) {
 
 function displayForecast(response) {
 	let forecastElement = document.querySelector("#forecast");
-	console.log(response.data);
+	forecastElement.innerHTML = null;
+	let forecast = null;
+	for (let index = 0; index < 6; index++) {
+		forecast = response.data.list[index];
+		forecastElement.innerHTML += `	<div class="col">
+			<h4>${formatHours(forecast.dt * 1000)}</h4>
+			<ul>
+				<li>
+					<img
+						src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+						alt="sunshine-icon"
+					/>
+				</li>
+				<li class="max-temp">${Math.round(forecast.main.temp_max)}°</li>
+				<li class="min-temp">${Math.round(forecast.main.temp_min)}°</li>
+			</ul>
+		</div>`;
+	}
 }
 
 function search(city) {
