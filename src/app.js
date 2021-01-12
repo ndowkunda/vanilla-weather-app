@@ -51,11 +51,18 @@ function handleSubmit(event) {
 	search(cityInputElement.value);
 }
 
+function displayForecast(response) {
+	let forecastElement = document.querySelector("#forecast");
+	console.log(response.data);
+}
+
 function search(city) {
 	let apiKey = "f6d0e3a57fd80dd4321d3619a54a57c4";
 	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
 	axios.get(apiUrl).then(displayTemp);
+
+	apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+	axios.get(apiUrl).then(displayForecast);
 }
 
 function displayFahrenheitTemp(event) {

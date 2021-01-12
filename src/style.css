@@ -23,8 +23,7 @@ li {
 	text-align: center;
 	font-weight: 500;
 }
-
-footer {
+small {
 	padding-top: 20px;
 }
 strong {
@@ -53,12 +52,19 @@ li:first-letter {
 	height: 100px;
 	width: 100px;
 }
+
+.upcoming-forecast {
+	margin-top: 30px;
+}
 .units {
 	font-weight: 500;
 	font-size: 20px;
 	position: relative;
 	right: -3px;
 	top: -12px;
+}
+.upcoming-forecast .min-temp {
+	color: #5e5858fb;
 }
 .units .active {
 	color: #000;
