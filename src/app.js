@@ -28,7 +28,7 @@ function formatHours(timestamp) {
 
 function displayTemp(response) {
 	let tempElement = document.querySelector("#current-temp");
-	let cityElement = document.querySelector("#city-name");
+	let cityElement = document.querySelector("#city");
 	let descriptionElement = document.querySelector("#weather-description");
 	let humidityElement = document.querySelector("#humidity-level");
 	let windElement = document.querySelector("#wind-speed");
