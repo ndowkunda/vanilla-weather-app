@@ -50,13 +50,14 @@
 							<div class="col align-self-center">
 								<h1 id="city"></h1>
 								<ul>
-									<li><span id="current-datetime"></span></li>
 									<li id="humidity-level"></li>
 									<li id="wind-speed"></li>
 								</ul>
 							</div>
 							<div class="col-auto">
-								<img src="#" alt="weather-icon" id="weather-icon" />
+								<span class="badge rounded-pill bg-dark">
+									<img src="#" alt="weather-icon" id="weather-icon"
+								/></span>
 							</div>
 							<div class="col align-self-center">
 								<ul>
@@ -71,13 +72,17 @@
 											></span
 										>
 									</li>
+									<li>
+										<h2><span id="current-datetime"></span></h2>
+									</li>
 								</ul>
 							</div>
 						</div>
 					</div>
-					<div class="upcoming-forecast" id="forecast">
-						<div class="row"></div>
-					</div>
+					<div
+						class="row rounded bg-light shadow-sm mx-auto p-3 upcoming-forecast"
+						id="forecast"
+					></div>
 				</div>
 				<small>
 					<a
