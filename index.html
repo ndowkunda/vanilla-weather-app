@@ -22,7 +22,7 @@
 	<body>
 		<div class="container">
 			<div class="weather-app-container">
-				<div class="weather-section">
+				<div class="weather-content">
 					<form id="search-form">
 						<div class="rounded rounded-pill shadow-sm mt-4 p-1">
 							<div class="input-group">
@@ -47,30 +47,23 @@
 					</form>
 					<div class="current-forecast">
 						<div class="row">
-							<div class="col-sm-6">
-								<h1 id="city">London</h1>
+							<div class="col align-self-center">
+								<h1 id="city"></h1>
 								<ul>
-									<li>
-										last updated: <span id="current-date">Friday, 16:12</span>
-									</li>
-									<li id="weather-description">Mostly Cloudy</li>
-									<li id="humidity-level">Humidity: 81%</li>
-									<li id="wind-speed">Wind: 13 KPH NW</li>
+									<li><span id="current-datetime"></span></li>
+									<li id="humidity-level"></li>
+									<li id="wind-speed"></li>
 								</ul>
 							</div>
-							<div class="col-sm-6">
+							<div class="col-auto">
+								<img src="#" alt="weather-icon" id="weather-icon" />
+							</div>
+							<div class="col align-self-center">
 								<ul>
-									<li>
-										<img
-											class="current-weather-icon"
-											src="#"
-											alt="sunshine-icon"
-											id="weather-icon"
-										/>
-									</li>
-									<li>
-										<strong id="current-temp">18</strong
-										><span class="units"
+									<li id="weather-description"></li>
+									<li id="temp-content">
+										<span id="current-temp"> 18 </span>
+										<span class="units"
 											><a href="#" id="celsius-link" class="active"> ℃ </a>|<a
 												href="#"
 												id="fahrenheit-link"

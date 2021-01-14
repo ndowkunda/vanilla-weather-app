@@ -11,7 +11,7 @@ function formatDate(timestamp) {
 		"Saturday",
 	];
 	let day = days[date.getDay()];
-	return `${day} , ${formatHours(timestamp)}`;
+	return ` Updated: ${day} , ${formatHours(timestamp)}`;
 }
 function formatHours(timestamp) {
 	let date = new Date(timestamp);
@@ -32,7 +32,7 @@ function displayTemp(response) {
 	let descriptionElement = document.querySelector("#weather-description");
 	let humidityElement = document.querySelector("#humidity-level");
 	let windElement = document.querySelector("#wind-speed");
-	let dateElement = document.querySelector("#current-date");
+	let dateElement = document.querySelector("#current-datetime");
 	let iconElement = document.querySelector("#weather-icon");
 	celsiusTemp = response.data.main.temp;
 	tempElement.innerHTML = Math.round(response.data.main.temp);

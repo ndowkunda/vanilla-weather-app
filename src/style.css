@@ -38,17 +38,25 @@ form {
 li:first-letter {
 	text-transform: capitalize;
 }
+li#temp-content {
+	position: relative;
+	right: -10px;
+}
+span#current-temp {
+	font-size: 30px;
+	align-items: center;
+}
 .weather-app-container {
 	max-width: 700px;
 	margin: 20px auto;
 }
-.weather-section {
+.weather-content {
 	padding: 20px;
 	border: 1px solid #000;
 	border-radius: 25px;
 }
 
-.current-weather-icon {
+#weather-icon {
 	height: 100px;
 	width: 100px;
 }
@@ -58,10 +66,9 @@ li:first-letter {
 }
 .units {
 	font-weight: 500;
-	font-size: 20px;
+	font-size: 18px;
 	position: relative;
-	right: -3px;
-	top: -12px;
+	top: -8px;
 }
 .upcoming-forecast .min-temp {
 	color: #5e5858fb;
