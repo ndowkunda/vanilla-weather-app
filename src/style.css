@@ -35,12 +35,16 @@ a {
 form {
 	margin-bottom: 30px;
 }
-li:first-letter {
-	text-transform: capitalize;
-}
 li#temp-content {
 	position: relative;
 	right: -10px;
+}
+li.forecast-icon {
+	position: relative;
+	right: 10px;
+}
+li:first-letter {
+	text-transform: capitalize;
 }
 span#current-temp {
 	font-size: 30px;
@@ -64,10 +68,7 @@ span#current-temp {
 	margin-top: 30px;
 	max-width: 650px;
 }
-li.forecast-icon {
-	position: relative;
-	right: 10px;
-}
+
 .units {
 	font-weight: 500;
 	font-size: 18px;

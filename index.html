@@ -26,6 +26,10 @@
 					<form id="search-form">
 						<div class="rounded rounded-pill shadow-sm mt-4 p-1">
 							<div class="input-group">
+								<span class="input-group-append"
+									><button id="geolocation" class="btn btn-link">
+										<i class="far fa-compass"></i></button
+								></span>
 								<input
 									type="search"
 									placeholder="Type a city..."
@@ -34,11 +38,7 @@
 									id="city-input"
 								/>
 								<div class="input-group-append">
-									<button
-										type="submit"
-										class="btn btn-link text-success"
-										value="search"
-									>
+									<button type="submit" class="btn btn-link" value="search">
 										<i class="fa fa-search"></i>
 									</button>
 								</div>
@@ -47,28 +47,24 @@
 					</form>
 					<div class="current-forecast">
 						<div class="row">
-							<div class="col-2">
-								<button id="geolocation" class="btn btn-link text-success">
-									<i class="far fa-compass"></i>
-								</button>
-							</div>
-						</div>
-						<div class="row">
 							<div class="col align-self-center">
-								<h1 id="city"></h1>
+								<h1 id="city">London</h1>
 								<ul>
-									<li id="humidity-level"></li>
-									<li id="wind-speed"></li>
+									<li id="humidity-level">Humidity: 80%</li>
+									<li id="wind-speed">Wind: 3 m/s</li>
 								</ul>
 							</div>
 							<div class="col-auto">
 								<span class="badge rounded-pill bg-dark">
-									<img src="#" alt="weather-icon" id="weather-icon"
+									<img
+										src="https://duckduckgo.com/assets/weather/svg/new/clear-day.svg"
+										alt="weather-icon"
+										id="weather-icon"
 								/></span>
 							</div>
 							<div class="col align-self-center">
 								<ul>
-									<li id="weather-description"></li>
+									<li id="weather-description">Sunshine</li>
 									<li id="temp-content">
 										<span id="current-temp"> 18 </span>
 										<span class="units"
@@ -80,7 +76,9 @@
 										>
 									</li>
 									<li>
-										<h2><span id="current-datetime"></span></h2>
+										<h2>
+											<span id="current-datetime">Updated: Friday , 20:13</span>
+										</h2>
 									</li>
 								</ul>
 							</div>
@@ -89,7 +87,86 @@
 					<div
 						class="row rounded bg-light shadow-sm mx-auto p-3 upcoming-forecast"
 						id="forecast"
-					></div>
+					>
+						<div class="col">
+							<h2>21:00</h2>
+							<ul>
+								<li>
+									<img
+										src="https://duckduckgo.com/assets/weather/svg/new/clear-day.svg"
+										alt="sunshine-icon"
+									/>
+								</li>
+								<li class="max-temp">18°</li>
+								<li class="min-temp">9°</li>
+							</ul>
+						</div>
+						<div class="col">
+							<h2>00:00</h2>
+							<ul>
+								<li>
+									<img
+										src="https://duckduckgo.com/assets/weather/svg/new/clear-day.svg"
+										alt="sunshine-icon"
+									/>
+								</li>
+								<li class="max-temp">18°</li>
+								<li class="min-temp">9°</li>
+							</ul>
+						</div>
+						<div class="col">
+							<h2>03:00</h2>
+							<ul>
+								<li>
+									<img
+										src="https://duckduckgo.com/assets/weather/svg/new/clear-day.svg"
+										alt="sunshine-icon"
+									/>
+								</li>
+								<li class="max-temp">18°</li>
+								<li class="min-temp">9°</li>
+							</ul>
+						</div>
+						<div class="col">
+							<h2>06:00</h2>
+							<ul>
+								<li>
+									<img
+										src="https://duckduckgo.com/assets/weather/svg/new/clear-day.svg"
+										alt="sunshine-icon"
+									/>
+								</li>
+								<li class="max-temp">18°</li>
+								<li class="min-temp">9°</li>
+							</ul>
+						</div>
+						<div class="col">
+							<h2>09:00</h2>
+							<ul>
+								<li>
+									<img
+										src="https://duckduckgo.com/assets/weather/svg/new/clear-day.svg"
+										alt="sunshine-icon"
+									/>
+								</li>
+								<li class="max-temp">18°</li>
+								<li class="min-temp">9°</li>
+							</ul>
+						</div>
+						<div class="col">
+							<h2>12:00</h2>
+							<ul>
+								<li>
+									<img
+										src="https://duckduckgo.com/assets/weather/svg/new/clear-day.svg"
+										alt="sunshine-icon"
+									/>
+								</li>
+								<li class="max-temp">18°</li>
+								<li class="min-temp">9°</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 				<small>
 					<a
