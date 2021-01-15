@@ -103,7 +103,26 @@ function displaycelsiusTemp(event) {
 	let tempElement = document.querySelector("#current-temp");
 	tempElement.innerHTML = Math.round(celsiusTemp);
 }
+
+function getPosition(position) {
+	let latitude = position.coords.latitude;
+	let longitude = position.coords.longitude;
+	let apiKey = "f6d0e3a57fd80dd4321d3619a54a57c4";
+
+	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+	axios.get(apiUrl).then(displayTemp);
+
+	apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+	axios.get(apiUrl).then(displayForecast);
+}
+function getCurrentPosition() {
+	navigator.geolocation.getCurrentPosition(getPosition);
+}
+
 let celsiusTemp = null;
+
+let locationButton = document.querySelector("#geolocation");
+locationButton.addEventListener("click", getCurrentPosition);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
