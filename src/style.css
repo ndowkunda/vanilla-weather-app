@@ -1,3 +1,9 @@
+body {
+	background-color: #e4d5cb;
+	color: #fff;
+	font-family: "Maison Neue", sans-serif;
+}
+
 h1,
 h2,
 h3 {
@@ -7,66 +13,76 @@ h3 {
 	text-align: center;
 }
 h1 {
-	color: #596aca;
+	font-weight: 600;
 }
 h2,
 h3 {
 	font-size: 18px;
-	color: #48484a;
 }
+
 ul {
 	margin: 0;
 	padding: 0;
 }
+
 li {
 	list-style-type: none;
 	text-align: center;
 	font-weight: 500;
 }
+
 small {
 	padding-top: 20px;
 }
+
 strong {
 	font-size: 36px;
 }
+
 a {
 	text-decoration: none;
 }
+
 form {
 	margin-bottom: 30px;
 }
+
 li#temp-content {
 	position: relative;
 	right: -10px;
 }
+
 li.forecast-icon {
 	position: relative;
 	right: 10px;
 }
+
 li:first-letter {
 	text-transform: capitalize;
 }
+
 span#current-temp {
-	font-size: 30px;
+	font-size: 3px;
 	align-items: center;
 }
+
 .weather-app-container {
+	position: relative;
+	top: 200px;
 	max-width: 700px;
 	margin: 20px auto;
 }
+
 .weather-content {
 	padding: 20px;
-	border: 1px solid #000;
+	border: 0.2rem outset #ece8d9;
 	border-radius: 25px;
+	background-color: #eba565;
 }
+
 #weather-icon {
 	height: 100px;
 	width: 100px;
-}
-
-.upcoming-forecast {
-	margin-top: 30px;
-	max-width: 650px;
 }
 
 .units {
@@ -75,8 +91,16 @@ span#current-temp {
 	position: relative;
 	top: -8px;
 }
+.upcoming-forecast {
+	margin-top: 30px;
+	max-width: 650px;
+}
+.form-control {
+	background-color: #eba565;
+	color: #fff;
+}
 .upcoming-forecast .min-temp {
-	color: #5e5858fb;
+	color: #a3a0a0fb;
 }
 .units .active {
 	color: #000;
